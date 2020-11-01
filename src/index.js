@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin/Admin.js";
 
@@ -30,10 +30,10 @@ const hist = createBrowserHistory();
 document.body.classList.add("white-content");
 
 ReactDOM.render(
-  <Router history={hist}>
+  <HashRouter >
     <Switch>
       <Route path="/" render={props => <AdminLayout {...props} />} />
     </Switch>
-  </Router>,
+  </HashRouter>,
   document.getElementById("root")
 );

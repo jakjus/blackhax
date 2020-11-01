@@ -7,6 +7,8 @@ import {
 	CardTitle
 } from "reactstrap";
 
+import { Link } from "react-router-dom";
+
 const LatestTable = props => {
 	const [array, setArray] = useState(null);
 
@@ -47,7 +49,7 @@ const LatestTable = props => {
 						{array.map(item => (
 							<tr key={item.date}>
 								<td>
-									<a className="d-block" href={!item.winners[0].placement ? `/ranks/${props.servername}/${item.winners[0].auth}` : undefined}>
+									<Link className="d-block" to={!item.winners[0].placement ? `/ranks/${props.servername}/${item.winners[0].auth}` : undefined}>
 									{item.winners[0].name}{" "}
 									<small>
 										(
@@ -55,10 +57,10 @@ const LatestTable = props => {
 											(item.winners[0].placement && "--")}
 										)
 									</small>
-									</a>
+									</Link>
 								</td>
 								<td>
-									<a className="d-block" href={!item.losers[0].placement ? `/ranks/${props.servername}/${item.losers[0].auth}` : undefined}>
+									<Link className="d-block" to={!item.losers[0].placement ? `/ranks/${props.servername}/${item.losers[0].auth}` : undefined}>
 									{item.losers[0].name}{" "}
 									<small>
 										(
@@ -66,7 +68,7 @@ const LatestTable = props => {
 											(item.losers[0].placement && "--")}
 										)
 									</small>
-									</a>
+									</Link>
 								</td>
 								<td>
 									{new Date(item.date).toLocaleString()}

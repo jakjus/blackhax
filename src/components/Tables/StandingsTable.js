@@ -6,6 +6,7 @@ import {
 	CardHeader,
 	CardBody
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const StandingsTable = props => {
 	const [array, setArray] = useState(null);
@@ -74,9 +75,9 @@ const StandingsTable = props => {
 						<tr>
 							<td>#{item.id}</td>
 							<td>
-									<a class="d-block" href={`/ranks/${props.servername}/${item.auth}`}>
+									<Link className="d-block" to={`/ranks/${props.servername}/${item.auth}`}>
 								{item.name}
-									</a>
+									</Link>
 							</td>
 							<td>{item.elo}</td>
 							<td>{item.league}</td>
