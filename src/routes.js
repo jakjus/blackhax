@@ -24,17 +24,22 @@ import UserProfile from "views/UserProfile.js";
 var routes = [
   {
 		path: "/ranks/:server/:auth",
-    name: "Dashboard",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/classic",
+    name: "Profile Details",
     rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
+    icon: "tim-icons ",
     component: Dashboard,
     layout: "/admin"
   },
   {
 		path: "/tables/:server",
-    name: "Table List",
+		pathStripped: "/tables",
+		server: "/classic",
+    name: "Server Statistics",
     rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-puzzle-10",
+    icon: "tim-icons icon-chart-pie-36",
     component: TableList,
     layout: "/admin"
   }

@@ -20,6 +20,10 @@
     "react-scripts": "3.4.0",
     "reactstrap": "8.4.1"
   },
+	"devDependencies":{
+    "gh-pages": "^3.1.0"
+	},
+	"homepage": "https://hb.jakjus.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
@@ -28,7 +32,8 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-scss": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css",
     "minify-sass": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css --source-map true"
+    "map-sass": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css --source-map true",
+		"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

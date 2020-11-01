@@ -45,10 +45,9 @@ const LatestTable = props => {
 					</thead>
 					<tbody>
 						{array.map(item => (
-							<tr>
-
+							<tr key={item.date}>
 								<td>
-									<a class="d-block" href={!item.winners[0].placement && `/ranks/${props.servername}/${item.winners[0].auth}`}>
+									<a className="d-block" href={!item.winners[0].placement ? `/ranks/${props.servername}/${item.winners[0].auth}` : undefined}>
 									{item.winners[0].name}{" "}
 									<small>
 										(
@@ -59,7 +58,7 @@ const LatestTable = props => {
 									</a>
 								</td>
 								<td>
-									<a class="d-block" href={!item.losers[0].placement && `/ranks/${props.servername}/${item.losers[0].auth}`}>
+									<a className="d-block" href={!item.losers[0].placement ? `/ranks/${props.servername}/${item.losers[0].auth}` : undefined}>
 									{item.losers[0].name}{" "}
 									<small>
 										(

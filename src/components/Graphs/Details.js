@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 // nodejs library that concatenates classes
 import { chartDoughnut } from "variables/charts.js";
 // react plugin used to create charts
-import { Line, Bar, Chart } from "react-chartjs-2";
 import Chartjs from "chart.js";
 
 // reactstrap components

@@ -27,7 +27,7 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
+import logo from "assets/img/favicon-32x32.png";
 
 var ps;
 
@@ -35,7 +35,7 @@ class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "primary",
+      backgroundColor: "blue",
       sidebarOpened:
         document.documentElement.className.indexOf("nav-open") !== -1
     };
@@ -81,7 +81,7 @@ class Admin extends React.Component {
       if (prop.layout === "/admin") {
         return (
           <Route
-            path={prop.path}
+						path={prop.path}
             component={prop.component}
             key={key}
           />
@@ -97,14 +97,14 @@ class Admin extends React.Component {
   getBrandText = path => {
     for (let i = 0; i < routes.length; i++) {
       if (
-        this.props.location.pathname.indexOf(
-          routes[i].layout + routes[i].path
-        ) !== -1
+        this.props.location.pathname.startsWith(
+          routes[i].pathStripped
+        )
       ) {
         return routes[i].name;
       }
     }
-    return "classic 1v1";
+    return this.props.location.pathname;
   };
   render() {
     return (
@@ -126,15 +126,16 @@ class Admin extends React.Component {
             ref="mainPanel"
             data={this.state.backgroundColor}
           >
-            <AdminNavbar
+						<AdminNavbar
               {...this.props}
               brandText={this.getBrandText(this.props.location.pathname)}
               toggleSidebar={this.toggleSidebar}
               sidebarOpened={this.state.sidebarOpened}
             />
+						
             <Switch>
               {this.getRoutes(routes)}
-              <Redirect from="*" to="/ranks"/>
+              <Redirect from="*" to="/tables/classic"/>
             </Switch>
 						<Footer fluid />
           </div>

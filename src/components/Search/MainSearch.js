@@ -53,7 +53,7 @@ class MainSearch extends Component {
 							</InputGroupAddon>
 								<Input
 									onFocus={this.onFocus}
-									autocomplete="off"
+									autoComplete="off"
 									name="query"
 									type="text"
 									value={this.state.query}

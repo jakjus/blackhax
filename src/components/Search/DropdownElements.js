@@ -42,7 +42,7 @@ class DropdownElements extends Component {
 		const items = [];
 		for (let obj of st) {
 			items.push(
-				<Link to={`/ranks/${this.props.server}/${obj["auth"]}`} onClick={e => this.props.callback(e)}>
+				<Link key={this.props.server+obj["auth"]} to={`/ranks/${this.props.server}/${obj["auth"]}`} onClick={e => this.props.callback(e)}>
 					<ListGroupItem className="list-group-item-action" key={obj["name"]}>
 						{obj["name"]} <small>({obj["elo"]})</small>
 					</ListGroupItem>
