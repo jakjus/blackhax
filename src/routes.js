@@ -30,6 +30,17 @@ var routes = [
     layout: "/admin"
   },
   {
+		//path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/huge",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/classic",
