@@ -37,6 +37,9 @@ const History = props => {
 				setStats(r[0].history);
 			})
 			.catch(e => console.log("Error: ", e));
+	}, [props]);
+
+	useEffect(() => {
 		let canv = chartContainer.current.getContext("2d");
 		let gradientStroke = canv.createLinearGradient(0, 230, 0, 50);
 		gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
@@ -51,7 +54,7 @@ const History = props => {
 			);
 			setChartInstance(newChartInstance);
 		}
-	}, [props]);
+	},[])
 
 	useEffect(() => {
 		if (chartInstance && stats) {

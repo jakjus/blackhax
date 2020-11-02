@@ -55,6 +55,9 @@ const Details = props => {
 				setInfo(r[0]);
 			})
 			.catch(e => console.log("Error: ", e));
+	}, [props]);
+
+	useEffect(() => {
 		if (chartContainer && chartContainer.current) {
 			let gradientChart = chartDoughnut;
 			const newChartInstance = new Chartjs(
@@ -63,13 +66,13 @@ const Details = props => {
 			);
 			setChartInstance(newChartInstance);
 		}
-	}, [props]);
+	},[])
 
 	useEffect(() => {
 		if (chartInstance) {
-			let newChartInstance = chartInstance;
-			newChartInstance.data.datasets[0].data = [info.wins, info.losses];
-			setChartInstance(newChartInstance);
+			//let newChartInstance = chartInstance;
+			chartInstance.data.datasets[0].data = [info.wins, info.losses];
+			//setChartInstance(newChartInstance);
 			chartInstance.update();
 		}
 	}, [info]);
