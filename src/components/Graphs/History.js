@@ -54,18 +54,27 @@ const History = props => {
 			);
 			setChartInstance(newChartInstance);
 		}
-	},[])
+	}, []);
 
 	useEffect(() => {
 		if (chartInstance && stats) {
-			if (chart === "week") {
-				chartInstance.data.datasets[0].data = stats.map(o => ({t: o.date, y: o.elo})).slice(-(6 * 7));
-			} else if (chart === "month") {
-				chartInstance.data.datasets[0].data = stats.map(o => ({t: o.date, y: o.elo})).slice(-(6 * 30));
-			} else if (chart === "all") {
-				chartInstance.data.datasets[0].data = stats.map(o => ({t: o.date, y: o.elo}));
+			if (stats.length > 0) {
+				if (chart === "week") {
+					chartInstance.data.datasets[0].data = stats
+						.map(o => ({ t: o.date, y: o.elo }))
+						.slice(-(6 * 7));
+				} else if (chart === "month") {
+					chartInstance.data.datasets[0].data = stats
+						.map(o => ({ t: o.date, y: o.elo }))
+						.slice(-(6 * 30));
+				} else if (chart === "all") {
+					chartInstance.data.datasets[0].data = stats.map(o => ({
+						t: o.date,
+						y: o.elo
+					}));
+				}
+				chartInstance.update();
 			}
-			chartInstance.update();
 		}
 	}, [stats, chart]);
 
@@ -78,8 +87,9 @@ const History = props => {
 							<Col className="text-left" sm="6">
 								<h5 className="card-category">Rank history - {props.server}</h5>
 								<CardTitle tag="h2">
-                    <i className="tim-icons icon-chart-bar-32 text-info" />{" "}
-								{nickname}</CardTitle>
+									<i className="tim-icons icon-chart-bar-32 text-info" />{" "}
+									{nickname}
+								</CardTitle>
 							</Col>
 							<Col sm="6">
 								<ButtonGroup
