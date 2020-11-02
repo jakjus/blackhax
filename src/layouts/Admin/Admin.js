@@ -97,8 +97,8 @@ class Admin extends React.Component {
   getBrandText = path => {
     for (let i = 0; i < routes.length; i++) {
       if (
-        this.props.location.pathname.startsWith(
-          routes[i].pathStripped
+        this.props.location.pathname.includes(
+          routes[i].pathStripped+routes[i].server
         )
       ) {
         return routes[i].name;

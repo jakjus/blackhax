@@ -15,11 +15,7 @@
 
 */
 import Dashboard from "views/Dashboard.js";
-import Icons from "views/Icons.js";
-import Map from "views/Map.js";
-import Notifications from "views/Notifications.js";
 import TableList from "views/TableList.js";
-import UserProfile from "views/UserProfile.js";
 
 var routes = [
   {
@@ -37,7 +33,17 @@ var routes = [
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/classic",
-    name: "Server Statistics",
+    name: "1v1 Classic",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		//path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/huge",
+    name: "4v4 Hot Huge",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
