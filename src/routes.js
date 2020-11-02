@@ -40,7 +40,7 @@ var routes = [
     layout: "/admin"
   },
   {
-		//path: "/tables/:server",
+		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/huge",
     name: "4v4 Hot Huge",
