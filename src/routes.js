@@ -30,7 +30,7 @@ var routes = [
     layout: "/admin"
   },
   {
-		//path: "/ranks/:server/:auth",
+		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
 		server: "/huge",
