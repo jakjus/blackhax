@@ -41,10 +41,32 @@ var routes = [
     layout: "/admin"
   },
   {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/classic-tr",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/huge-tr",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/classic",
-    name: "1v1 Classic",
+    name: "1v1 Classic EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -54,7 +76,27 @@ var routes = [
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/huge",
-    name: "4v4 Hot Huge",
+    name: "4v4 Hot Huge EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/classic-tr",
+    name: "1v1 Classic TR",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/huge-tr",
+    name: "4v4 Hot Huge TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,

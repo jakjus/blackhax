@@ -99,8 +99,13 @@ class Admin extends React.Component {
       if (
         this.props.location.pathname.includes(
           routes[i].pathStripped+routes[i].server
-        )
-      ) {
+				) && (
+
+        !this.props.location.pathname.includes(
+          routes[i].pathStripped+routes[i].server+"-"
+
+				)
+      )) {
         return routes[i].name;
       }
     }
