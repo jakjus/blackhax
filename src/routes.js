@@ -16,7 +16,7 @@
 */
 import Dashboard from "views/Dashboard.js";
 import TableList from "views/TableList.js";
-import Shop from "views/Shop.js";
+import { Shop, ShopSuccess } from "views/Shop.js";
 
 var routes = [
   {
@@ -185,6 +185,17 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/shop/success",
+		pathStripped: "/shop/success",
+		redirect: 1,
+		server: "",
+    name: "Success!",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-money-coins",
+    component: ShopSuccess,
     layout: "/admin"
   },
   {

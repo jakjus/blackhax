@@ -91,70 +91,77 @@ const Shop = props => {
 					</p>
 					<ul>
 						<li>Coins will be signed to your haxball account.</li>
-							<li>After purchase, <b>code</b> will be sent on your e-mail address automatically.</li>
-						<li>Activate it on server by typing "!code code_from_email" in chat.</li>
+						<li>
+							After purchase, <b>code</b> will be sent on your e-mail address
+							automatically.
+						</li>
+						<li>
+							Activate it on server by typing "!code code_from_email" in chat.
+						</li>
 					</ul>
-							<Card>
-					<Row>
-						<Col>
-							<Button
-								key="coins500"
-								role="link"
-								className="btn-block"
-								onClick={() =>
-									handleClick({ itemname: "coins500", currency: "eur" })
-								}
-							>
-								Buy <i className="tim-icons icon-coins" /> 500 coins (0.99EUR)
-							</Button>
-						</Col>
-						<Col>
-							<Button
-								key="coins500"
-								role="link"
-								className="btn-block"
-								onClick={() =>
-									handleClick({ itemname: "coins500", currency: "pln" })
-								}
-							>
-								Buy <i className="tim-icons icon-coins" /> 500 coins (4.49PLN)
-							</Button>
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<Button
-								key="coins2600"
-								role="link"
-								className="btn-block"
-								onClick={() =>
-									handleClick({ itemname: "coins2600", currency: "eur" })
-								}
-							>
-								Buy <i className="tim-icons icon-coins" /> 2600 coins (3.99EUR)
-							</Button>
-						</Col>
-						<Col>
-							<Button
-								key="coins2600"
-								role="link"
-								className="btn-block"
-								onClick={() =>
-									handleClick({ itemname: "coins2600", currency: "pln" })
-								}
-							>
-								Buy <i className="tim-icons icon-coins" /> 2600 coins (17.99PLN)
-							</Button>
-						</Col>
-					</Row>
-							</Card>
+					<Card>
+						<Row>
+							<Col>
+								<Button
+									key="coins500"
+									role="link"
+									className="btn-block"
+									onClick={() =>
+										handleClick({ itemname: "coins500", currency: "eur" })
+									}
+								>
+									Buy <i className="tim-icons icon-coins" /> 500 coins (0.99EUR)
+								</Button>
+							</Col>
+							<Col>
+								<Button
+									key="coins500"
+									role="link"
+									className="btn-block"
+									onClick={() =>
+										handleClick({ itemname: "coins500", currency: "pln" })
+									}
+								>
+									Buy <i className="tim-icons icon-coins" /> 500 coins (4.49PLN)
+								</Button>
+							</Col>
+						</Row>
+						<Row>
+							<Col>
+								<Button
+									key="coins2600"
+									role="link"
+									className="btn-block"
+									onClick={() =>
+										handleClick({ itemname: "coins2600", currency: "eur" })
+									}
+								>
+									Buy <i className="tim-icons icon-coins" /> 2600 coins
+									(3.99EUR)
+								</Button>
+							</Col>
+							<Col>
+								<Button
+									key="coins2600"
+									role="link"
+									className="btn-block"
+									onClick={() =>
+										handleClick({ itemname: "coins2600", currency: "pln" })
+									}
+								>
+									Buy <i className="tim-icons icon-coins" /> 2600 coins
+									(17.99PLN)
+								</Button>
+							</Col>
+						</Row>
+					</Card>
 					<p className="text-info">
 						If you have any problems, contact admin directly 24/7 on discord
 						(right-bottom corner).
 					</p>
 					<p className="text-danger">
-							Never give your code to any other person. Admin will never ask
-							you for your code.
+						Never give your code to any other person. Admin will never ask you
+						for your code.
 					</p>
 				</CardBody>
 			</Card>
@@ -162,7 +169,30 @@ const Shop = props => {
 	);
 };
 
-export default Shop;
+const ShopSuccess = props => {
+	return (
+		<div className="content">
+			<Card>
+				<CardHeader>
+					<Row>
+						<Col className="text-left">
+							<h3 className="card-category">Buy coins</h3>
+							<CardTitle tag="h2">Store</CardTitle>
+						</Col>
+					</Row>
+				</CardHeader>
+				<CardBody>
+					<p className="h4">
+						Welcome to the <b>store</b>!
+					</p>
+					<p className="text-primary">Your purchase is successfully completed! Check your email for the code (also spam folder).</p>
+				</CardBody>
+			</Card>
+		</div>
+	);
+};
+
+export { Shop, ShopSuccess };
 /*
 					<small>
 					*If you will uninstall/change browser and you still want to save your rank and items:
