@@ -16,6 +16,7 @@
 */
 import Dashboard from "views/Dashboard.js";
 import TableList from "views/TableList.js";
+import Shop from "views/Shop.js";
 
 var routes = [
   {
@@ -44,7 +45,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/bouncer",
+		server: "/futsalv3",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -88,7 +89,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/lacrosse",
+		server: "/handball",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -129,8 +130,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/bouncer",
-    name: "4v4 Probounce EU",
+		server: "/futsalv3",
+    name: "3v3 Futsal EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -149,8 +150,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/lacrosse",
-    name: "4v4 Lacrosse EU",
+		server: "/handball",
+    name: "4v4 Handball EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -184,6 +185,16 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/shop",
+		pathStripped: "/shop",
+		server: "",
+    name: "BUY COINS",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-money-coins",
+    component: Shop,
     layout: "/admin"
   }
 ];
