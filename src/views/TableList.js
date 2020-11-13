@@ -34,12 +34,12 @@ class Tables extends React.Component {
       <>
         <div className="content">
           <Row>
-            <Col md="6">
+            <Col md="7">
 							<MainSearch server={this.props.match.params.server}/>
 							<ServerStatus servername={this.props.match.params.server}/>
 							<LatestTable servername={this.props.match.params.server}/>
             </Col>
-            <Col md="6">
+            <Col md="5">
 									<StandingsTable servername={this.props.match.params.server}/>
             </Col>
           </Row>
