@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-	Card,
-	Table,
-	CardHeader,
-	CardBody,
-	CardTitle,
-	Col,
-	Row
-} from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Col, Row } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
@@ -15,11 +7,24 @@ const ServerStatus = props => {
 	const [status, setStatus] = useState(null);
 
 	useEffect(() => {
-		const URI = "https://host.jakjus.com/readStatus?server=" + props.servername;
-		fetch(URI)
-			.then(r => r.json())
-			.then(r => setStatus(r[0]))
-			.catch(e => console.log("Error: ", e));
+			const URI =
+				"https://host.jakjus.com/readStatus?server=" + props.servername;
+			fetch(URI)
+				.then(r => r.json())
+				.then(r => setStatus(r[0]))
+				.catch(e => console.log("Error: ", e));
+	}, [props]);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const URI =
+				"https://host.jakjus.com/readStatus?server=" + props.servername;
+			fetch(URI)
+				.then(r => r.json())
+				.then(r => setStatus(r[0]))
+				.catch(e => console.log("Error: ", e));
+		}, 7000);
+		return () => clearInterval(interval);
 	}, [props]);
 
 	if (!status) {
