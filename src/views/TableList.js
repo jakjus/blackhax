@@ -26,6 +26,7 @@ import {
 import StandingsTable from "components/Tables/StandingsTable.js"
 import LatestTable from "components/Tables/LatestTable.js"
 import MainSearch from "components/Search/MainSearch.js"
+import ServerStatus from "components/Tables/ServerStatus.js"
 
 class Tables extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class Tables extends React.Component {
           <Row>
             <Col md="6">
 							<MainSearch server={this.props.match.params.server}/>
+							<ServerStatus servername={this.props.match.params.server}/>
 							<LatestTable servername={this.props.match.params.server}/>
             </Col>
             <Col md="6">

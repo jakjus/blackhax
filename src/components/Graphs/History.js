@@ -60,14 +60,25 @@ const History = props => {
 		if (chartInstance && stats) {
 			if (stats.length > 0) {
 				if (chart === "week") {
+					let d = new Date();
 					chartInstance.data.datasets[0].data = stats
-						.map(o => ({ t: o.date, y: o.elo }))
-						.slice(-(6 * 7));
+						.filter(
+							o =>
+								new Date(o.date).getTime() >
+								d.getTime() - 1000 * 60 * 60 * 24 * 7
+						)
+						.map(o => ({ t: o.date, y: o.elo }));
 				} else if (chart === "month") {
+					let d = new Date();
 					chartInstance.data.datasets[0].data = stats
-						.map(o => ({ t: o.date, y: o.elo }))
-						.slice(-(6 * 30));
+						.filter(
+							o =>
+								new Date(o.date).getTime() >
+								d.getTime() - 1000 * 60 * 60 * 24 * 30
+						)
+						.map(o => ({ t: o.date, y: o.elo }));
 				} else if (chart === "all") {
+					let d = new Date();
 					chartInstance.data.datasets[0].data = stats.map(o => ({
 						t: o.date,
 						y: o.elo
