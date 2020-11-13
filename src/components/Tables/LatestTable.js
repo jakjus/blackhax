@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Table, CardHeader, CardBody, CardTitle } from "reactstrap";
+import { Badge, Card, Table, CardHeader, CardBody, CardTitle } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
@@ -54,9 +54,9 @@ const LatestTable = props => {
 											}
 										>
 											{p.name}{" "}
-											<small>
-												({(!p.placement && p.elo) || (p.placement && "--")})
-											</small>
+									<Badge style={{ verticalAlign: "middle" }} color="secondary">
+												{(!p.placement && p.elo) || (p.placement && "--")}
+											</Badge>
 										</Link>
 									))}
 								</td>
@@ -71,13 +71,13 @@ const LatestTable = props => {
 											}
 										>
 											{p.name}{" "}
-											<small>
-												({(!p.placement && p.elo) || (p.placement && "--")})
-											</small>
+									<Badge style={{ verticalAlign: "middle" }} color="secondary">
+												{(!p.placement && p.elo) || (p.placement && "--")}
+											</Badge>
 										</Link>
 									))}
 								</td>
-								<td>{new Date(item.date).toLocaleString()}</td>
+								<td><small>{new Date(item.date).toLocaleString()}</small></td>
 							</tr>
 						))}
 					</tbody>

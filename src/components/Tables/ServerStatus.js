@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardHeader, CardBody, CardTitle, Col, Row } from "reactstrap";
+import { Badge, Card, CardHeader, CardBody, CardTitle, Col, Row } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
@@ -56,9 +56,9 @@ const ServerStatus = props => {
 											}
 										>
 											{p.name}{" "}
-											<small>
-												({(!p.placement && p.elo) || (p.placement && "--")})
-											</small>
+									<Badge style={{ verticalAlign: "middle" }} color="secondary">
+												{(!p.placement && p.elo) || (p.placement && "--")}
+											</Badge>
 										</Link>
 									))}
 						</Col>
@@ -77,9 +77,9 @@ const ServerStatus = props => {
 											}
 										>
 											{p.name}{" "}
-											<small>
-												({(!p.placement && p.elo) || (p.placement && "--")})
-											</small>
+									<Badge style={{ verticalAlign: "middle" }} color="secondary">
+												{(!p.placement && p.elo) || (p.placement && "--")}
+											</Badge>
 										</Link>
 									))}
 						</Col>
@@ -98,9 +98,9 @@ const ServerStatus = props => {
 											}
 										>
 											{p.name}{" "}
-											<small>
-												({(!p.placement && p.elo) || (p.placement && "--")})
-											</small>
+									<Badge style={{ verticalAlign: "middle" }} color="secondary">
+												{(!p.placement && p.elo) || (p.placement && "--")}
+											</Badge>
 										</Link>
 									))}
 						</Col>
