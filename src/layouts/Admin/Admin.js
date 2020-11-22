@@ -141,6 +141,7 @@ class Admin extends React.Component {
             <Switch>
               {this.getRoutes(routes)}
               <Redirect from="/" to="/tables/classic"/>
+              <Redirect from="/tr" to="/tables/classic-tr"/>
             </Switch>
 						<Footer fluid />
           </div>
