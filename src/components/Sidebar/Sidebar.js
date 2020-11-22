@@ -140,7 +140,7 @@ class Sidebar extends React.Component {
 										<span className="mr-2">Region:</span>{" "}
 										<span>
 											{this.props.location.pathname.includes("tr")
-												? "🇹🇷TR"
+												? "🇹🇷 TR"
 												: " 🇵🇱  EU"}
 										</span>
 									</Row>
