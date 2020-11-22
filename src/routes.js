@@ -89,6 +89,28 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
+		server: "/futsalv4",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/nhl",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
 		server: "/classic-tr",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
@@ -216,6 +238,29 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/futsalv4",
+    name: "4v4 FIHA Futsal EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/nhl",
+    name: "4v4 NHL Hockey EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+
+	/* SERVERS TURKEY */
+
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
