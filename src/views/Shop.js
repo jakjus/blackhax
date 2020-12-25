@@ -103,53 +103,53 @@ const Shop = props => {
 						<Row>
 							<Col>
 								<Button
-									key="coins500"
+									key="coins16000"
 									role="link"
 									className="btn-block"
 									onClick={() =>
-										handleClick({ itemname: "coins500", currency: "eur" })
+										handleClick({ itemname: "coins16000", currency: "eur" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 500 coins (0.99EUR)
+									Buy <i className="tim-icons icon-coins" /> 16000 coins (0.99EUR)
 								</Button>
 							</Col>
 							<Col>
 								<Button
-									key="coins500"
+									key="coins16000"
 									role="link"
 									className="btn-block"
 									onClick={() =>
-										handleClick({ itemname: "coins500", currency: "pln" })
+										handleClick({ itemname: "coins16000", currency: "pln" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 500 coins (4.49PLN)
+									Buy <i className="tim-icons icon-coins" /> 16000 coins (4.49PLN)
 								</Button>
 							</Col>
 						</Row>
 						<Row>
 							<Col>
 								<Button
-									key="coins2600"
+									key="coins80000"
 									role="link"
 									className="btn-block"
 									onClick={() =>
-										handleClick({ itemname: "coins2600", currency: "eur" })
+										handleClick({ itemname: "coins80000", currency: "eur" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 2600 coins
+									Buy <i className="tim-icons icon-coins" /> 80000 coins
 									(3.99EUR)
 								</Button>
 							</Col>
 							<Col>
 								<Button
-									key="coins2600"
+									key="coins80000"
 									role="link"
 									className="btn-block"
 									onClick={() =>
-										handleClick({ itemname: "coins2600", currency: "pln" })
+										handleClick({ itemname: "coins80000", currency: "pln" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 2600 coins
+									Buy <i className="tim-icons icon-coins" /> 80000 coins
 									(17.99PLN)
 								</Button>
 							</Col>
