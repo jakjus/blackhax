@@ -20,6 +20,26 @@ import { Shop, ShopSuccess } from "views/Shop.js";
 
 var routes = [
   {
+		path: "/shop",
+		pathStripped: "/shop",
+		server: "",
+    name: "BUY COINS",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-money-coins",
+    component: Shop,
+    layout: "/admin"
+  },
+  {
+		path: "/shop-tr",
+		pathStripped: "/shop",
+		server: "-tr",
+    name: "BUY COINS",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-money-coins",
+    component: Shop,
+    layout: "/admin"
+  },
+  {
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
@@ -330,26 +350,6 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-money-coins",
     component: ShopSuccess,
-    layout: "/admin"
-  },
-  {
-		path: "/shop",
-		pathStripped: "/shop",
-		server: "",
-    name: "BUY COINS",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-money-coins",
-    component: Shop,
-    layout: "/admin"
-  },
-  {
-		path: "/shop-tr",
-		pathStripped: "/shop",
-		server: "-tr",
-    name: "BUY COINS",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-money-coins",
-    component: Shop,
     layout: "/admin"
   }
 ];
