@@ -5,10 +5,16 @@ import { Link } from "react-router-dom";
 
 const ServerStatus = props => {
 	const [status, setStatus] = useState(null);
+	let add;
+	if (props.server_instance){
+		add = "&server_instance=" + props.server_instance;
+	} else {
+		add = ""
+	}
 
 	useEffect(() => {
 			const URI =
-				"https://host.jakjus.com/readStatus?server=" + props.servername;
+				"https://host.jakjus.com/readStatus?server=" + props.servername + add
 			fetch(URI)
 				.then(r => r.json())
 				.then(r => setStatus(r[0]))
@@ -18,7 +24,7 @@ const ServerStatus = props => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			const URI =
-				"https://host.jakjus.com/readStatus?server=" + props.servername;
+				"https://host.jakjus.com/readStatus?server=" + props.servername + add
 			fetch(URI)
 				.then(r => r.json())
 				.then(r => setStatus(r[0]))

@@ -18,35 +18,48 @@
 import React from "react";
 
 // reactstrap components
-import {
-  Row,
-  Col
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 
-import StandingsTable from "components/Tables/StandingsTable.js"
-import LatestTable from "components/Tables/LatestTable.js"
-import MainSearch from "components/Search/MainSearch.js"
-import ServerStatus from "components/Tables/ServerStatus.js"
+import StandingsTable from "components/Tables/StandingsTable.js";
+import LatestTable from "components/Tables/LatestTable.js";
+import Gotm from "components/Tables/Gotm.js";
+import MainSearch from "components/Search/MainSearch.js";
+import ServerStatus from "components/Tables/ServerStatus.js";
 
 class Tables extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="content">
-          <Row>
-            <Col md="7">
-							<MainSearch server={this.props.match.params.server}/>
-							<ServerStatus servername={this.props.match.params.server}/>
-							<LatestTable servername={this.props.match.params.server}/>
-            </Col>
-            <Col md="5">
-									<StandingsTable servername={this.props.match.params.server}/>
-            </Col>
-          </Row>
-        </div>
-      </>
-    );
-  }
+	render() {
+		return (
+			<>
+				<div className="content">
+					<Row>
+						<Col md="7">
+							<MainSearch server={this.props.match.params.server} />
+							{this.props.match.params.server == "waterpolo" ? (
+								<>
+									<ServerStatus
+										servername={this.props.match.params.server}
+										server_instance="1"
+									/>
+									<ServerStatus
+										servername={this.props.match.params.server}
+										server_instance="2"
+									/>
+								</>
+							) : (
+								<ServerStatus
+									servername={this.props.match.params.server}
+								/>
+							)}
+							<LatestTable servername={this.props.match.params.server} />
+						</Col>
+						<Col md="5">
+							<StandingsTable servername={this.props.match.params.server} />
+						</Col>
+					</Row>
+				</div>
+			</>
+		);
+	}
 }
 
 export default Tables;

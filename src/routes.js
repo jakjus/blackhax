@@ -20,6 +20,17 @@ import { Shop, ShopSuccess } from "views/Shop.js";
 
 var routes = [
   {
+		path: "/shop/success",
+		pathStripped: "/shop/success",
+		redirect: 1,
+		server: "",
+    name: "Success!",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-money-coins",
+    component: ShopSuccess,
+    layout: "/admin"
+  },
+  {
 		path: "/shop",
 		pathStripped: "/shop",
 		server: "",
@@ -87,7 +98,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/basket",
+		server: "/big",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -109,18 +120,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/futsalv4",
-    name: "Profile Details",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons ",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
-		path: "/ranks/:server/:auth",
-		redirect: 1,
-		pathStripped: "/ranks",
-		server: "/nhl",
+		server: "/iqball",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -241,8 +241,18 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/basket",
-    name: "3v3 Basketball EU",
+		server: "/iqball",
+    name: "3v3 IQBall EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/big",
+    name: "3v3 Big EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -252,27 +262,7 @@ var routes = [
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/waterpolo",
-    name: "4v4 Water Polo EU",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/futsalv4",
-    name: "4v4 FIHA Futsal EU",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/nhl",
-    name: "4v4 NHL Hockey EU",
+    name: "4v4 Waterpolo EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -339,17 +329,6 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/shop/success",
-		pathStripped: "/shop/success",
-		redirect: 1,
-		server: "",
-    name: "Success!",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-money-coins",
-    component: ShopSuccess,
     layout: "/admin"
   }
 ];

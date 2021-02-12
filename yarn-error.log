@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/jakubjuszko/.yarn/bin/yarn.js add --dev react-snap
+  /usr/local/bin/node /Users/jakubjuszko/.yarn/bin/yarn.js install
 
 PATH: 
   /Users/jakubjuszko/.yarn/bin:/Users/jakubjuszko/.config/yarn/global/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin
@@ -8,13 +8,13 @@ Yarn version:
   1.14.0
 
 Node version: 
-  10.15.1
+  14.15.4
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, rmdir '/Users/jakubjuszko/Documents/projects/blackhax/node_modules/.cache/gh-pages/github.com!idlehere!blackhax.git/static/css'
+  Error: EACCES: permission denied, rmdir '/Users/jakubjuszko/Documents/projects/blackhax/node_modules/.cache/babel-loader'
 
 npm manifest: 
   {
@@ -47,7 +47,7 @@ npm manifest:
     },
     "scripts": {
       "start": "react-scripts start",
-      "build": "react-scripts build && gulp licenses",
+      "build": "react-scripts build",
       "test": "react-scripts test --env=jsdom",
       "eject": "react-scripts eject",
       "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
