@@ -212,7 +212,7 @@ var routes = [
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/huge",
-    name: "4v4 Hot Huge EU",
+    name: "5v5 Hot Huge EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
