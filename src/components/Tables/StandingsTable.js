@@ -19,7 +19,7 @@ const StandingsTable = props => {
 		unranked: [0x6e6e6e, null, "Unranked"],
 		ann: [0xdcfa50, "small-bold"]
 	};
-	let rank = { silver: 1130, gold: 1310, diamond: 1440, master: 1600 };
+	let rank = { silver: 1130, gold: 1310, diamond: 1440, master: 1550 };
 	const colorFromElo = elo => {
 		if (elo < rank.silver) {
 			return colors.bronze;
