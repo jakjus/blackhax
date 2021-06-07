@@ -26,7 +26,7 @@ const History = props => {
 
 	useEffect(() => {
 		const URI =
-			"https://host.jakjus.com/players?server=" +
+			"https://host.jakjus.com/playersProjAll?server=" +
 			props.server +
 			"&auth=" +
 			props.auth;
