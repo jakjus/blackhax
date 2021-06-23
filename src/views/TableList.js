@@ -22,7 +22,7 @@ import { Row, Col } from "reactstrap";
 
 import StandingsTable from "components/Tables/StandingsTable.js";
 import LatestTable from "components/Tables/LatestTable.js";
-import Gotm from "components/Tables/Gotm.js";
+//import Gotm from "components/Tables/Gotm.js";
 import MainSearch from "components/Search/MainSearch.js";
 import ServerStatus from "components/Tables/ServerStatus.js";
 
@@ -34,22 +34,9 @@ class Tables extends React.Component {
 					<Row>
 						<Col md="7">
 							<MainSearch server={this.props.match.params.server} />
-							{this.props.match.params.server == "waterpolo" ? (
-								<>
-									<ServerStatus
-										servername={this.props.match.params.server}
-										server_instance="1"
-									/>
-									<ServerStatus
-										servername={this.props.match.params.server}
-										server_instance="2"
-									/>
-								</>
-							) : (
 								<ServerStatus
 									servername={this.props.match.params.server}
 								/>
-							)}
 							<LatestTable servername={this.props.match.params.server} />
 						</Col>
 						<Col md="5">
