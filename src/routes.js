@@ -87,28 +87,6 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/futsalv3",
-    name: "Profile Details",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons ",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
-		path: "/ranks/:server/:auth",
-		redirect: 1,
-		pathStripped: "/ranks",
-		server: "/redfutsal",
-    name: "Profile Details",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons ",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
-		path: "/ranks/:server/:auth",
-		redirect: 1,
-		pathStripped: "/ranks",
 		server: "/waterpolo",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
@@ -153,7 +131,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/huge-tr",
+		server: "/bigeasy-tr",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -164,29 +142,7 @@ var routes = [
 		path: "/ranks/:server/:auth",
 		redirect: 1,
 		pathStripped: "/ranks",
-		server: "/futsalv3-tr",
-    name: "Profile Details",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons ",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
-		path: "/ranks/:server/:auth",
-		redirect: 1,
-		pathStripped: "/ranks",
-		server: "/redfutsal-tr",
-    name: "Profile Details",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons ",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
-		path: "/ranks/:server/:auth",
-		redirect: 1,
-		pathStripped: "/ranks",
-		server: "/basket-tr",
+		server: "/big-tr",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -198,6 +154,28 @@ var routes = [
 		redirect: 1,
 		pathStripped: "/ranks",
 		server: "/waterpolo-tr",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/war-tr",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/magic-tr",
     name: "Profile Details",
     rtlName: "لوحة القيادة",
     icon: "tim-icons ",
@@ -222,16 +200,6 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/big",
-    name: "3v3 Big EU",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
 		server: "/bigeasy",
     name: "4v4 Big Easy EU",
     rtlName: "قائمة الجدول",
@@ -239,28 +207,16 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
-	/*
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/futsalv3",
-    name: "3v3 Hot Futsal EU",
+		server: "/big",
+    name: "3v3 Big EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
     layout: "/admin"
   },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/redfutsal",
-    name: "3v3 Red Futsal EU",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-	*/
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
@@ -307,8 +263,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/huge-tr",
-    name: "4v4 Hot Huge TR",
+		server: "/bigeasy-tr",
+    name: "4v4 Big Easy TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -317,28 +273,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/futsalv3-tr",
-    name: "3v3 Hot Futsal TR",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/redfutsal-tr",
-    name: "3v3 Red Futsal TR",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/basket-tr",
-    name: "3v3 Basketball TR",
+		server: "/big-tr",
+    name: "3v3 Big TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -348,11 +284,31 @@ var routes = [
 		path: "/tables/:server",
 		pathStripped: "/tables",
 		server: "/waterpolo-tr",
-    name: "4v4 Water Polo TR",
+    name: "4v4 Waterpolo TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
     layout: "/admin"
-  }
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/war-tr",
+    name: "8v8 War TR",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/magic-tr",
+    name: "5v5 Superhero TR",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
 ];
 export default routes;
