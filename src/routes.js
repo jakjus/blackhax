@@ -200,8 +200,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/bigeasy",
-    name: "4v4 Big Easy EU",
+		server: "/power3",
+    name: "3v3 Power EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -210,8 +210,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/big",
-    name: "3v3 Big EU",
+		server: "/power4",
+    name: "4v4 Power EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -263,8 +263,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/bigeasy-tr",
-    name: "4v4 Big Easy TR",
+		server: "/power3-tr",
+    name: "3v3 Power TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -273,8 +273,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/big-tr",
-    name: "3v3 Big TR",
+		server: "/power4-tr",
+    name: "4v4 Power TR",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
