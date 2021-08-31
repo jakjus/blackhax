@@ -136,8 +136,7 @@ const Shop = props => {
 										handleClick({ itemname: "coins80000", currency: "eur" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 80000 coins
-									<s>(9.99EUR)</s> (5.99EUR)
+									Buy <i className="tim-icons icon-coins" /> 80000 coins <s>(9.99EUR)</s> (5.99EUR)
 								</Button>
 							</Col>
 							<Col>
@@ -149,8 +148,7 @@ const Shop = props => {
 										handleClick({ itemname: "coins80000", currency: "pln" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 80000 coins
-									<s>(44.99PLN)</s> (25.99PLN)
+									Buy <i className="tim-icons icon-coins" /> 80000 coins <s>(44.99PLN)</s> (25.99PLN)
 								</Button>
 							</Col>
 						</Row>
