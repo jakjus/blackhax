@@ -94,6 +94,7 @@ var routes = [
     component: Dashboard,
     layout: "/admin"
   },
+  /*
   {
 		path: "/ranks/:server/:auth",
 		redirect: 1,
@@ -105,6 +106,7 @@ var routes = [
     component: Dashboard,
     layout: "/admin"
   },
+  */
   {
 		path: "/ranks/:server/:auth",
 		redirect: 1,
@@ -227,6 +229,7 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
+  /*
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
@@ -237,6 +240,7 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
+  */
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
