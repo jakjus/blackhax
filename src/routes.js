@@ -94,6 +94,28 @@ var routes = [
     component: Dashboard,
     layout: "/admin"
   },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/power6",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+		path: "/ranks/:server/:auth",
+		redirect: 1,
+		pathStripped: "/ranks",
+		server: "/futsal4",
+    name: "Profile Details",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons ",
+    component: Dashboard,
+    layout: "/admin"
+  },
   /*
   {
 		path: "/ranks/:server/:auth",
@@ -212,8 +234,8 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/power4",
-    name: "4v4 Power EU",
+		server: "/waterpolo",
+    name: "4v4 Waterpolo EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -222,8 +244,28 @@ var routes = [
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
-		server: "/waterpolo",
-    name: "4v4 Waterpolo EU",
+		server: "/magic2",
+    name: "5v5 Superhero EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/futsal4",
+    name: "4v4 Futsal EU",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-chart-pie-36",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+		path: "/tables/:server",
+		pathStripped: "/tables",
+		server: "/power6",
+    name: "6v6 Power EU",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-chart-pie-36",
     component: TableList,
@@ -241,16 +283,6 @@ var routes = [
     layout: "/admin"
   },
   */
-  {
-		path: "/tables/:server",
-		pathStripped: "/tables",
-		server: "/magic2",
-    name: "5v5 Superhero S2 EU",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-chart-pie-36",
-    component: TableList,
-    layout: "/admin"
-  },
 
 	/* SERVERS TURKEY */
 
