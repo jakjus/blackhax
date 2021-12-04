@@ -110,7 +110,7 @@ const Shop = props => {
 										handleClick({ itemname: "coins16000", currency: "eur" })
 									}
 								>
-									Buy <i className="tim-icons icon-coins" /> 16000 coins (1.99EUR)
+									Buy <i className="tim-icons icon-coins" /> 16000 coins (2.39EUR)
 								</Button>
 							</Col>
 							<Col>
@@ -154,11 +154,10 @@ const Shop = props => {
 						</Row>
 					</Card>
 					<p className="text-info">
-						If you have any problems, contact admin directly 24/7 on discord
-						(right-bottom corner).
+						Any problems? Contact: jakub@jakjus.com
 					</p>
 					<p className="text-danger">
-						Never give your code to any other person. Admin will never ask you
+						<b>Never</b> give your code to any other person. Admin will never ask you
 						for your code.
 					</p>
 				</CardBody>

@@ -189,6 +189,7 @@ class Sidebar extends React.Component {
 							);
 						})}
 					</Nav>
+    <iframe className="mt-4" src="https://discord.com/widget?id=744104994340601927&theme=light" width="100%" height="350" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				</div>
 			</div>
 		);
