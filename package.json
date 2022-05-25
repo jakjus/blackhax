@@ -9,7 +9,6 @@
     "chart.js": "2.9.3",
     "classnames": "2.2.6",
     "history": "4.10.1",
-    "node-sass": "4.13.1",
     "perfect-scrollbar": "1.5.0",
     "prop-types": "15.7.2",
     "react": "16.13.0",
@@ -24,7 +23,8 @@
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.8"
+    "gulp-append-prepend": "1.0.8",
+    "sass": "^1.52.1"
   },
   "scripts": {
     "start": "react-scripts start",
