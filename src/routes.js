@@ -20,10 +20,10 @@ import { Shop, ShopSuccess } from "views/Shop.js";
 
 var routes = [
   {
-		path: "/shop/success",
-		pathStripped: "/shop/success",
-		redirect: 1,
-		server: "",
+    path: "/shop/success",
+    pathStripped: "/shop/success",
+    redirect: 1,
+    server: "",
     name: "Success!",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-money-coins",
@@ -328,6 +328,7 @@ var routes = [
 
 	/* SERVERS TURKEY */
 
+    /*
   {
 		path: "/tables/:server",
 		pathStripped: "/tables",
@@ -388,5 +389,6 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
+  */
 ];
 export default routes;

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://hb.jakjus.com",
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.8.3",
     "@stripe/stripe-js": "^1.11.0",
     "@types/react": "16.9.23",
     "chart.js": "2.9.3",
