@@ -36,8 +36,8 @@ const Shop = props => {
         setSelected(event.target.value);
     };
 
-    //const host = "https://host.jakjus.com";
-    const host = "http://localhost:3000";
+    const host = "https://host.jakjus.com";
+    //const host = "http://localhost:3000";
 
     const handleClickStripe = async item => {
         // Get Stripe.js instance
