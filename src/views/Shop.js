@@ -123,8 +123,8 @@ const Shop = props => {
         </Col>
         </Row>
 
-        <PayPalScriptProvider options={{ "client-id": "AY1jEIy8OF3YPJ23BYzkljrNkSPF4h3vokvdTqYmmVxz82ZX5hrMC2paeHW3An3eUmWnRwkOu6c223wi", "currency": "PLN" }}>
-            <PayPalButtons forceReRender={[selected]} style={{ layout: "horizontal" }} createOrder={async (data, actions) => {
+        <PayPalScriptProvider options={{ "client-id": "Ab3Y_E02xquSiGkcq_aJssxm6YMOY2hQHcFxwjvPW4EnxE__L06lPCCfa8xKUUc-j7IGQk03NMniLFc_", "currency": "PLN" }}>
+            <PayPalButtons forceReRender={[selected]} createOrder={async (data, actions) => {
                 const body = JSON.stringify({sku: selected})
                 const response = await fetch(host + "/paypal/create-paypal-order", {
 
