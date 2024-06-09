@@ -169,23 +169,12 @@ const Shop = props => {
                     // When ready to go live, remove the alert and show a success message within this page. For example:
                     //var element = document.getElementById('payment-successful');
                     //element.innerHTML = 'Thank you for your payment!';
-                    actions.redirect('https://hb.jakjus.com/#/shop/success')
+                    actions.redirect('https://ar.jakjus.com/#/shop/success')
                     // Or go to another URL:  actions.redirect('thank_you.html');
                 });
         }}
         />
         </PayPalScriptProvider>
-
-        //<Button
-        //key="buy"
-        //role="link"
-        //className="btn-block"
-        //onClick={() =>
-        //    handleClickStripe({ itemname: selected, currency: "pln" })
-        //}>
-        //<i className="tim-icons icon-coins" /> Pay with Stripe
-        //</Button>
-
         </Card>
         <p className="text-info">
         Any problems? Contact: jakub@jakjus.com

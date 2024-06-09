@@ -138,19 +138,12 @@ class Sidebar extends React.Component {
 								<DropdownToggle caret className="btn-warning">
 									<Row>
 										<span className="mr-2">Region:</span>{" "}
-										<span>
-											{this.props.location.pathname.includes("tr")
-												? "🇹🇷 TR"
-												: " 🇵🇱  EU"}
-										</span>
+										<span> 🇦🇷 AR </span>
 									</Row>
 								</DropdownToggle>
 								<DropdownMenu>
 									<Link to="/tables/classic">
-										<DropdownItem tag="a">Europe</DropdownItem>{" "}
-									</Link>
-									<Link to="/tables/classic-tr">
-										<DropdownItem tag="a">Turkey</DropdownItem>
+										<DropdownItem tag="a">Argentina</DropdownItem>{" "}
 									</Link>
 								</DropdownMenu>
 							</Dropdown>
@@ -189,7 +182,7 @@ class Sidebar extends React.Component {
 							);
 						})}
 					</Nav>
-    <iframe className="mt-4" src="https://discord.com/widget?id=744104994340601927&theme=light" width="100%" height="350" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <iframe className="mt-4" src="https://discord.com/widget?id=1248342886379032707&theme=light" width="100%" height="350" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				</div>
 			</div>
 		);
