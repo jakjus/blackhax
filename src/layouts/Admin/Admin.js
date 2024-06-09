@@ -121,7 +121,7 @@ class Admin extends React.Component {
             bgColor={this.state.backgroundColor}
             logo={{
               outterLink: "#",
-              text: "hb.jakjus.com",
+              text: "ar.jakjus.com",
               imgSrc: logo
             }}
             toggleSidebar={this.toggleSidebar}

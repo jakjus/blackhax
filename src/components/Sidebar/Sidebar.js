@@ -137,7 +137,7 @@ class Sidebar extends React.Component {
 							>
 								<DropdownToggle caret className="btn-warning">
 									<Row>
-										<span className="mr-2">Region:</span>{" "}
+										<span className="mr-2">Region</span>{" "}
 										<span> 🇦🇷 AR </span>
 									</Row>
 								</DropdownToggle>
