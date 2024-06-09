@@ -45,7 +45,7 @@ const Details = props => {
 
 	useEffect(() => {
 		const URI =
-			"https://host.jakjus.com/players?server=" +
+			"/api/playerDetails?server=" +
 			props.server +
 			"&auth=" +
 			props.auth;

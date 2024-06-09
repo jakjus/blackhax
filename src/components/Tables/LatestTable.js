@@ -9,7 +9,7 @@ const LatestTable = props => {
 	useEffect(() => {
 		let auth = props.auth || "";
 		const URI =
-			"https://host.jakjus.com/matches?server=" +
+			"/api/matches?server=" +
 			props.servername +
 			"&auth=" +
 			auth +

@@ -26,8 +26,8 @@ const stripePromise = loadStripe(
 
 const Shop = props => {
     const options = [
-        {value: 'coins16000', text: '16000 Coins (9.99PLN)'},
-        {value: 'coins80000', text: '80000 Coins (39.99PLN)'},
+        {value: 'coins16000', text: '16000 Coins (1999 ARS)'},
+        {value: 'coins80000', text: '80000 Coins (7999 ARS)'},
     ];
 
     const [selected, setSelected] = useState(options[0].value);
@@ -36,7 +36,8 @@ const Shop = props => {
         setSelected(event.target.value);
     };
 
-    const host = "https://host.jakjus.com";
+    //const host = "https://host.jakjus.com";
+    const host = "/api";
     //const host = "http://localhost:3000";
 
     const handleClickStripe = async item => {
@@ -123,7 +124,7 @@ const Shop = props => {
         </Col>
         </Row>
 
-        <PayPalScriptProvider options={{ "client-id": "Ab3Y_E02xquSiGkcq_aJssxm6YMOY2hQHcFxwjvPW4EnxE__L06lPCCfa8xKUUc-j7IGQk03NMniLFc_", "currency": "PLN" }}>
+        <PayPalScriptProvider options={{ "client-id": "Ab3Y_E02xquSiGkcq_aJssxm6YMOY2hQHcFxwjvPW4EnxE__L06lPCCfa8xKUUc-j7IGQk03NMniLFc_", "currency": "ARS" }}>
             <PayPalButtons forceReRender={[selected]} createOrder={async (data, actions) => {
                 const body = JSON.stringify({sku: selected})
                 const response = await fetch(host + "/paypal/create-paypal-order", {
@@ -175,15 +176,16 @@ const Shop = props => {
         />
         </PayPalScriptProvider>
 
-        <Button
-        key="buy"
-        role="link"
-        className="btn-block"
-        onClick={() =>
-            handleClickStripe({ itemname: selected, currency: "pln" })
-        }>
-        <i className="tim-icons icon-coins" /> Pay with Stripe
-        </Button>
+        //<Button
+        //key="buy"
+        //role="link"
+        //className="btn-block"
+        //onClick={() =>
+        //    handleClickStripe({ itemname: selected, currency: "pln" })
+        //}>
+        //<i className="tim-icons icon-coins" /> Pay with Stripe
+        //</Button>
+
         </Card>
         <p className="text-info">
         Any problems? Contact: jakub@jakjus.com

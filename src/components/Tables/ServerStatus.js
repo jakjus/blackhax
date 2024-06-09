@@ -14,7 +14,7 @@ const ServerStatus = props => {
 
     useEffect(() => {
         const URI =
-            "https://host.jakjus.com/readStatus?server=" + props.servername + add
+            "/api/readStatusWeb?server=" + props.servername + add
         fetch(URI)
             .then(r => r.json())
             .then(r => setStatus(r[0]))
@@ -24,7 +24,7 @@ const ServerStatus = props => {
     useEffect(() => {
         const interval = setInterval(() => {
             const URI =
-                "https://host.jakjus.com/readStatus?server=" + props.servername + add
+                "/api/readStatusWeb?server=" + props.servername + add
             fetch(URI)
                 .then(r => r.json())
                 .then(r => setStatus(r[0]))

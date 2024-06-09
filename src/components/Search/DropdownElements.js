@@ -24,7 +24,7 @@ class DropdownElements extends Component {
 
 	fetchData = name => {
 		const URI =
-			"https://host.jakjus.com/search?server=" +
+			"/api/search?server=" +
 			this.props.server +
 			"&name=" +
 			name +

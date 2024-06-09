@@ -36,7 +36,7 @@ const StandingsTable = props => {
 
 	useEffect(() => {
 		const URI =
-			"https://host.jakjus.com/allplayers?server=" + props.servername + "&n=" + 30;
+			"/api/allplayers?server=" + props.servername + "&n=" + 30;
 		fetch(URI)
 			.then(r => r.json())
 			.then(r => {
