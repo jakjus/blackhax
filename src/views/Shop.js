@@ -89,16 +89,14 @@ const Shop = props => {
         </CardHeader>
         <CardBody>
         <p className="h4">
-        Welcome to the <b>store</b>!
+        ¡Bienvenido a la <b>tienda</b>!
         </p>
         <ul>
-        <li>Coins will be signed to your haxball account.</li>
+        <li>Las monedas se registrarán en su cuenta de haxball.</li>
         <li>
-        After purchase, <b>code</b> will be sent on your e-mail address
-        automatically.
-        </li>
+        Después de la compra, se enviará un <b>código</b> a su dirección de correo electrónico.</li>
         <li>
-        Activate it on server by typing "!code code_from_email" in chat.
+        Actívelo en una sala escribiendo el código "!code código_del_correo" del correo electrónico en el chat.
         </li>
         </ul>
         <Card>
@@ -203,9 +201,9 @@ const ShopSuccess = props => {
         </CardHeader>
         <CardBody>
         <p className="h4">
-        Welcome to the <b>store</b>!
+        ¡Bienvenido a la <b>tienda</b>!
         </p>
-        <p className="text-primary">Your purchase is successfully completed! Check your email for the code (also spam folder).</p>
+        <p className="text-primary"> ¡Tu compra se completó con éxito! Revise su correo electrónico para ver el código (también la carpeta de spam).</p>
         </CardBody>
         </Card>
         </div>
