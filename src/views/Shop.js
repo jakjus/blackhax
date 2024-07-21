@@ -26,8 +26,8 @@ const stripePromise = loadStripe(
 
 const Shop = props => {
     const options = [
-        {value: 'coins16000', text: '16000 Coins (1999 ARS)'},
-        {value: 'coins80000', text: '80000 Coins (7999 ARS)'},
+        {value: 'coins16000', text: '16000 Coins (2.99 USD)'},
+        {value: 'coins80000', text: '80000 Coins (11.99 USD) (20% MÁS ECONÓMICO)'},
     ];
 
     const [selected, setSelected] = useState(options[0].value);
