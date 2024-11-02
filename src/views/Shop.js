@@ -26,8 +26,8 @@ const stripePromise = loadStripe(
 
 const Shop = props => {
     const options = [
-        {value: 'coins16000', text: '16000 Coins (2.99 USD)'},
-        {value: 'coins80000', text: '80000 Coins (11.99 USD) (20% MÁS ECONÓMICO)'},
+        {value: 'coins16000', text: '16000 Coins (2999$Ar)'},
+        {value: 'coins80000', text: '80000 Coins (11999$Ar) (25% MÁS MONEDAS)'},
     ];
 
     const [selected, setSelected] = useState(options[0].value);
@@ -63,7 +63,7 @@ const Shop = props => {
         if (result.error) {
             return (
                 <section className="section">
-                <h2>Shop</h2>
+                <h2>Tienda</h2>
                 <div className="card">
                 <p>${result.error.message}</p>
                 </div>
@@ -174,6 +174,15 @@ const Shop = props => {
         />
         </PayPalScriptProvider>
         */
+        <Button
+        key="buy"
+        role="link"
+        className="btn-block"
+        onClick={() =>
+            handleClickStripe({ itemname: selected, currency: "ars" })
+        }>
+        <i className="tim-icons icon-coins" /> Pay with Stripe
+        </Button>
     </Card>
         <p className="text-info">
             ¿Algún problema? Contacto: jakub@jakjus.com
