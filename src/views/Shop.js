@@ -83,7 +83,7 @@ const Shop = props => {
         <Row>
         <Col className="text-left">
         <h3 className="card-category">Buy coins</h3>
-        <CardTitle tag="h2">Store</CardTitle>
+        <CardTitle tag="h2">Tienda</CardTitle>
         </Col>
         </Row>
         </CardHeader>
@@ -96,7 +96,7 @@ const Shop = props => {
         <li>
         Después de la compra, se enviará un <b>código</b> a su dirección de correo electrónico.</li>
         <li>
-        Actívelo en una sala escribiendo el código "!code código_del_correo" del correo electrónico en el chat.
+        Actívelo en una sala escribiendo el código "!code código_del_correo" en el chat.
         </li>
         </ul>
         <Card>
@@ -112,7 +112,6 @@ const Shop = props => {
         value={selected}
         onChange={handleChange}
         >
-        >
         {options.map(option => (
             <option key={option.value} value={option.value}>
             {option.text}
@@ -122,6 +121,7 @@ const Shop = props => {
         </Col>
         </Row>
 
+                        /*
         <PayPalScriptProvider options={{ "client-id": "Ab3Y_E02xquSiGkcq_aJssxm6YMOY2hQHcFxwjvPW4EnxE__L06lPCCfa8xKUUc-j7IGQk03NMniLFc_", "currency": "USD" }}>
             <PayPalButtons forceReRender={[selected]} createOrder={async (data, actions) => {
                 const body = JSON.stringify({sku: selected})
@@ -173,14 +173,15 @@ const Shop = props => {
         }}
         />
         </PayPalScriptProvider>
-        </Card>
+        */
+    </Card>
         <p className="text-info">
-        Any problems? Contact: jakub@jakjus.com
+            ¿Algún problema? Contacto: jakub@jakjus.com
+            </p>
+            <p className="texto-peligro">
+            <b>Nunca</b> proporciones tu código a ninguna otra persona. El administrador nunca te preguntará para tu código.
         </p>
-        <p className="text-danger">
-        <b>Never</b> give your code to any other person. Admin will never ask you
-        for your code.
-        </p>
+
         </CardBody>
         </Card>
         </div>
