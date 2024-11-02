@@ -120,60 +120,6 @@ const Shop = props => {
         </Input>
         </Col>
         </Row>
-
-                        /*
-        <PayPalScriptProvider options={{ "client-id": "Ab3Y_E02xquSiGkcq_aJssxm6YMOY2hQHcFxwjvPW4EnxE__L06lPCCfa8xKUUc-j7IGQk03NMniLFc_", "currency": "USD" }}>
-            <PayPalButtons forceReRender={[selected]} createOrder={async (data, actions) => {
-                const body = JSON.stringify({sku: selected})
-                const response = await fetch(host + "/paypal/create-paypal-order", {
-
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: body
-                });
-                const order = await response.json();
-                return order.id
-
-            }}
-        onApprove={async (data, actions) => {
-            return fetch(host + "/paypal/capture-paypal-order", {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    orderID: data.orderID,
-                }),
-            })
-                .then((response) => response.json())
-                .then((orderData) => {
-                    console.log('got capture', orderData)
-                    // Successful capture! For dev/demo purposes:
-                    // console.log(
-                    //     "Capture result",
-                    //     orderData,
-                    //     JSON.stringify(orderData, null, 2)
-                    // );
-                    // const transaction = orderData.purchase_units[0].payments.captures[0];
-                    // alert(
-                    //     "Transaction " +
-                    //     transaction.status +
-                    //     ": " +
-                    //     transaction.id +
-                    //     "\n\nSee console for all available details"
-                    // );
-                    // When ready to go live, remove the alert and show a success message within this page. For example:
-                    //var element = document.getElementById('payment-successful');
-                    //element.innerHTML = 'Thank you for your payment!';
-                    actions.redirect('https://ar.jakjus.com/#/shop/success')
-                    // Or go to another URL:  actions.redirect('thank_you.html');
-                });
-        }}
-        />
-        </PayPalScriptProvider>
-        */
         <Button
         key="buy"
         role="link"
