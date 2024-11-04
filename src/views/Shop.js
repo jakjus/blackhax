@@ -26,8 +26,8 @@ const stripePromise = loadStripe(
 
 const Shop = props => {
     const options = [
-        {value: 'coins16000', text: '16000 Coins (2999$Ar)'},
-        {value: 'coins80000', text: '80000 Coins (11999$Ar) (25% MÁS MONEDAS)'},
+        {value: 'coins16000', text: '16000 Coins (2999$Ar | 2.99$US)'},
+        {value: 'coins80000', text: '80000 Coins (11999$Ar | 11.99$US) (25% MÁS MONEDAS)'},
     ];
 
     const [selected, setSelected] = useState(options[0].value);
@@ -127,7 +127,16 @@ const Shop = props => {
         onClick={() =>
             handleClickStripe({ itemname: selected, currency: "ars" })
         }>
-        <i className="tim-icons icon-coins" /> Pay with Stripe
+        <i className="tim-icons icon-coins" /> Pagar en ARS (solo Argentinos)
+        </Button>
+        <Button
+        key="buy"
+        role="link"
+        className="btn-block"
+        onClick={() =>
+            handleClickStripe({ itemname: selected, currency: "usd" })
+        }>
+        <i className="tim-icons icon-coins" /> Pagar en USD (disponible para todos)
         </Button>
     </Card>
         <p className="text-info">
